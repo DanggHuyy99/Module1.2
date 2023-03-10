@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Comics</title>
+    <link rel="icon" href="image/logoMarvel.png">
+</head>
+<body>
+    <h1>Marvel Comics</h1>
+        <table style="text-align: center;">
+            <tr>
+                <td></td>
+                <td><button id="spiderman" onclick="changeCharacter1()">Spider Man</button></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td><button id="DoctorStrange" onclick="changeCharacter2()">Doctor Strange</button></td>
+                <td> <img class="antmann" src="image/antman.png"></td>
+                <td><button id="CaptainAmerica" onclick="changeCharacter3()">Captain America</button>  </td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button id="ScarletWitch" onclick="changeCharacter4()">Scarlet Witch</button></td>
+                <td></td>
+            </tr>
+
+    <!-- <img class="antmann" src="image/antman.png">
+    <button id="antman" onclick="changeCharacter()">Ant Man</button> -->
+
+    <!-- <img class="spidermann" class="spiderman" src="image/spiderman.png"> -->
+        </table>
+
+    
+    <script>
+        function changeCharacter1(){
+            if (document.getElementById('spiderman').innerText == 'Spider Man'){
+                document.getElementsByClassName('antmann')[0].src = 'image/spiderman.png';
+                // document.getElementById('spiderman').innerText = 'Ant Man'
+            }
+            else{
+                document.getElementsByClassName('antmann')[0].src = 'image/antman.png';
+                // document.getElementById('spiderman').innerText = 'Spider Man';
+            }
+        }
+            function changeCharacter3(){
+            if (document.getElementById('CaptainAmerica').innerText == 'Captain America'){
+                document.getElementsByClassName('antmann')[0].src = 'image/CaptainAmerica.png';
+                // document.getElementById('CaptainAmerica').innerText = 'Ant Man';
+            }
+            else{
+                document.getElementsByClassName('antmann')[0].src = 'image/antman.png';
+                // document.getElementById('CaptainAmerica').innerText = 'Captain America';
+            }
+        // 
+    
+       }
+            function changeCharacter2(){
+            if  (document.getElementById('DoctorStrange').innerText =='Doctor Strange' ){
+                document.getElementsByClassName('antmann')[0].src='image/DoctorStrange.png';
+                // document.getElementById('DoctorStrange').innerText ='Ant Man' ;
+            }
+            else{
+                document.getElementsByClassName('antmann')[0].src = 'image/antman.png';
+                // document.getElementById('DoctorStrange').innerText ='Doctor Strange' ;
+            }
+            }
+            function changeCharacter4(){
+                if (document.getElementById('ScarletWitch').innerText=='Scarlet Witch'){
+                    document.getElementsByClassName('antmann')[0].src='image/ScarletWitch.png';
+                    // document.getElementById('ScarletWitch').innerText='Ant Man';
+                }
+                else{
+                    document.getElementsByClassName('antmann')[0].src='image/antman.png';
+                    // document.getElementById('ScarletWitch').innerText='Scarlet Witch';
+                }
+            }
+    </script>
+</body>
+</html>
