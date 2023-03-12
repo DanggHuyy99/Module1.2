@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle</title>
+</head>
+<body>
+    <div>
+    <p>Nhập bán kính đường tròn: <input type="number" value="0" id="radius" onkeydown="circle()">  </p>
+    <p>Diện tích hình tròn: <span id="SCircle">0</span> </p>
+    <p>Chu vi hình tròn: <span id="CVCircle">0</span></p>
+    </div>
+ 
+    <script>
+        function circle(){
+            let r = document.getElementById('radius').value;
+            let CV = 2*3.14*r;
+            let CVT = Math.round((CV + Number.EPSILON)*100)/100; // Lấy 2 chữ số thập phân sau cùng của CV hình tròn
+            document.getElementById('CVCircle').innerText = CVT;
+            
+            let DT = r*r*3.14;
+            let DTT = Math.round((DT + Number.EPSILON)*100)/100;
+            document.getElementById('SCircle').innerText = DTT;   // Lấy 2 chữ số thập phân sau cùng của Diện tích hình tròn          
+        }              
+    </script>
+</body>
+</html>

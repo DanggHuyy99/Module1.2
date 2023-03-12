@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biến , Kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+  <script>
+    let Physics = prompt('Nhập điểm Lý;');
+    let Chemistry = prompt('Nhập điểm Hoá;');
+    let Biology = prompt('Nhập điểm Sinh:');
+    let Average = (Number(Physics)+Number(Chemistry)+Number(Biology))/3
+    let DTB = Math.round((Average+Number.EPSILON)*10)/10
+    document.write('Nhập điểm Lý: '+Physics); document.write('<br>');
+    document.write('Nhập điểm Hoá: '+Chemistry);  document.write('<br>');
+    document.write('Nhập điểm Sinh: '+Biology);  document.write('<br>');
+    document.write('Điểm trung bình: ' + DTB)
+    console.log(DTB.toFixed(1))
+  </script>
+</body>
+</html>
