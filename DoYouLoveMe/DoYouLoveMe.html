@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do you love me?</title>
+    <style>
+        body{
+            background-color: aquamarine;
+            background: url("https://www.pixelstalk.net/wp-content/uploads/2016/08/Wallpapers-Background-Full-HD.jpg") no-repeat fixed center;
+            background-size: 100%;
+           
+        }
+        p{
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            font-size: 60px;
+            color: rgb(223, 29, 29);
+            font-style: italic ;
+            margin: 235px;
+            margin-left: 250px;
+
+        }
+        #yesSer{
+            position: absolute;
+            left: 300px;
+            top: 330px;
+            width: 150px;
+            height: 50px;
+            border-radius: 35%;          
+            border-color: rgb(238, 45, 45);
+            border: 4px solid green;
+            border-style: dashed ;
+            background-color: rgb(167, 247, 92);
+        }
+        #not{
+            position: absolute;
+            left: 470px;
+            top: 330px; 
+            width: 150px;
+            height: 50px;
+            border-radius: 35%;        
+            border-color: rgb(238, 45, 45);
+            border: 4px solid green;
+            border-style: dashed ;
+            background-color: rgb(167, 247, 92);
+        }
+    </style>
+</head>
+<body>
+    
+    <p>Do you love me?</p>
+    <input type="button" value="YES" id="yesSer" onclick="yesIDO()"  >
+    <input type="button" value="NO" id="not" onmouseover="noIDONT()" >
+
+    <script>
+        function yesIDO(){
+            alert('Yes. You are my love <3');
+        }
+        function noIDONT(){
+            let no2 = Math.round(Math.random() * window.innerWidth);
+            let no3 = Math.round(Math.random() * window.innerHeight);
+            document.getElementById('not').style.left=no2 + 'px';
+            document.getElementById('not').style.top=no3 + 'px';
+        }
+    </script>
+</body>
+</html>
