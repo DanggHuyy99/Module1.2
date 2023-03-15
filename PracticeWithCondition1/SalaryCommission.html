@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rose</title>
+</head>
+<body>
+<h1>Salary</h1>
+    <div>
+        <p>Enter Sales</p> <input id="n1" type="number">
+    </div> <br>
+    <div>
+        <button onclick="Salary()">Result</button>
+        <p><span id="result"></span></p>
+    </div>
+
+    <script>
+        function Salary(){
+            let n1 = document.getElementById('n1').value;
+            switch (n1 > 100000000){
+                case true:
+                    document.getElementById('result').innerText="Salary up 20%"
+                    break;
+                case false:
+                    switch (n1 > 80000000){
+                        case true:
+                            document.getElementById('result').innerText="Salary up 15%"
+                            break;
+                        case false:
+                            switch (n1 > 50000000){
+                                case true:
+                                    document.getElementById('result').innerText="Salary up 10%"
+                                    break;
+                                case false:
+                                    document.getElementById('result').innerText="No Salary"
+                                    break;
+                         }
+                    } 
+            }
+    }
+    </script>
+</body>
+</html>

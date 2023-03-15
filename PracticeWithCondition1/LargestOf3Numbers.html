@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Largest?</title>
+</head>
+
+<body>
+    <h1>largest of 3 numbers</h1>
+    <div>
+        <p>Enter Number 1</p> <input id="n1" type="number">
+    </div>
+    <div>
+        <p>Enter Number 2</p> <input id="n2" type="number">
+    </div>
+    <div>
+        <p>Enter Number 3</p> <input id="n3" type="number">
+    </div> <br>
+    <div>
+        <button onclick="compare()">Result</button>
+        <p><span id="result"></span></p>
+    </div>
+
+    <script>    
+        function compare() {
+            let n1 = parseInt(document.getElementById('n1').value);
+            let n2 = parseInt(document.getElementById('n2').value);
+            let n3 = parseInt(document.getElementById('n3').value);
+            if (n1 > n2) {
+                if (n1 > n3) {
+                    document.getElementById('result').innerText = "number 1 is largest";
+                    console.log("a");
+                } else {
+                    document.getElementById('result').innerText = "number 3 is largest";
+                    console.log("b");
+                }
+            } else if (n2 > n3) {
+                document.getElementById('result').innerText = "number 2 is largest";
+                console.log("c");
+            } else {
+                document.getElementById('result').innerText = "number 3 is largest";
+                console.log("d");
+            }
+        }
+    </script>
+</body>
+
+</html>

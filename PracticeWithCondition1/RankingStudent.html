@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ranking</title>
+</head>
+<body>
+    <h1>Ranking of Student</h1>
+    <div>
+        <p>Enter test point</p> <input id="n1" type="number">
+    </div>
+    <div>
+        <p>Enter midterm point</p> <input id="n2" type="number">
+    </div>
+    <div>
+        <p>Enter end of term point</p> <input id="n3" type="number">
+    </div> <br>
+    <div>
+        <button onclick="ranking()">Average</button>
+        <p><span id="average"></span></p>
+        <button onclick="ranking()">Result</button>
+        <p><span id="result"></span></p>
+    </div>
+
+    <script>
+        function ranking(){
+            let n1 = parseInt(document.getElementById('n1').value);
+            let n2 = parseInt(document.getElementById('n2').value);
+            let n3 = parseInt(document.getElementById('n3').value);
+            let DTB = (n1 +n2 +n3) / 3;
+            document.getElementById('average').innerText=DTB;
+            if (DTB >= 8){
+                document.getElementById('result').innerText="Good Student"
+            } else {
+                if (DTB >= 6.5){ 
+                    document.getElementById('result').innerText="Advanced Student";                
+                } else {
+                    if (DTB >= 5){
+                        document.getElementById('result').innerText="Medium Student";                
+                    } else {
+                        document.getElementById('result').innerText="Ignorant Student";                
+                    }
+                }
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fee Phone</title>
+</head>
+<body>
+    <h1>Fee Phone</h1>
+    <div>
+        <p>Enter a number minutes to call</p> <input id="n1" type="number">
+    </div> <br>
+    <div>
+        <button onclick="Fee()">Result</button>
+        <p><span id="result"></span></p>
+    </div>
+
+    <script>
+        function Fee(){
+            let n1 = document.getElementById('n1').value;
+            switch (n1 > 10000){
+                case true:
+                    document.getElementById('result').innerText="500.000VNĐ/month"
+                    break;
+                case false:
+                    switch (n1 > 1000){
+                        case true:
+                            document.getElementById('result').innerText="300.000VNĐ/month"
+                            break;
+                        case false:
+                            switch (n1 > 500){
+                                case true:
+                                    document.getElementById('result').innerText="139.000VNĐ/month"
+                                    break;
+                                case false:
+                                    document.getElementById('result').innerText="100.000VNĐ/month"
+                                    break;
+                         }
+                    } 
+            }
+    }
+    </script>
+</body>
+</html>

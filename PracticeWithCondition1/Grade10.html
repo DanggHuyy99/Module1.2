@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade10</title>
+</head>
+<body>
+    <h1>Eligible for 10th grade?</h1>
+    <div>
+        <p>Enter Age</p>
+        <input id="num" type="number">
+    </div> <br>
+    <div>
+        <button onclick="result()">Result</button>
+        <p> <span id="result"></span></span> </p> 
+    </div>
+    <script>
+        function result(){     
+            let number = document.getElementById('num').value;
+            if (number < 16){
+                document.getElementById('result').innerText="Not enough age to 10th grade"
+            } else {
+                document.getElementById('result').innerText="Enough age to 10th grade"
+            }
+    }
+    </script>
+</body>
+</html>
