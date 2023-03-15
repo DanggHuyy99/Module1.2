@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leep Year</title>
+</head>
+<body>
+    
+<script>
+    let year = parseInt(prompt('Enter a year'));
+    let isLeepYear = false;
+
+    let yearmod4 = year % 4 == 0;
+    if (yearmod4) {
+        let yearmod100 = year % 100 == 0;
+        if (yearmod100) {
+            let yearmod400 = year % 400 == 0;
+            if (yearmod400) {
+                isLeepYear = true;
+            }
+        } else { 
+            isLeepYear = true;
+        }       
+    }
+    
+    if (isLeepYear) {
+        alert(year + ' is a leep year');
+    } else {
+        alert(year + ' is not a leep year');
+    }
+</script>
+
+</body>
+</html>
