@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Currency</title>
+</head>
+<style>
+    .a{
+        background-color: rgb(211, 181, 240);
+        border-radius: 30%;
+        box-shadow: 1px 2px chocolate;
+        resize: both;
+        overflow: auto;
+    }
+</style>
+<body>
+    <form >
+    <table>
+        <tr>
+            <td><p>Amount</p></td>
+            <td>From Currency</td>
+            <td>To Currency</td>
+        </tr>
+        <tr>
+            <td>
+                <input type="number" id="nut" >
+            </td>
+            <td>
+                <select id="vnd">
+                    <option value="VND" >VND</option>
+                    <option value="USD" >USD</option>
+                </select>
+            </td>
+            <td>
+                <select id="usd">
+                    <option value="VND" >VND</option>
+                    <option value="USD" >USD</option>
+                </select>
+            </td>
+            <td>
+                <input class="a" type="button" value="Convert" onclick="clickhere()">
+            </td>
+        </tr>
+        <tr>
+            <td>Result: <span id="show">0</span></td>
+        </tr>
+    </table>
+    </form>
+
+    <script>
+        function clickhere(){
+            let tien = document.getElementById('nut').value;
+            let vn = document.getElementById('vnd').value;
+            let my = document.getElementById('usd').value;
+            if (vn=='VND'){
+                if (my=='USD'){
+                    let tien2 = tien/23000;
+                    document.getElementById('show').innerText=tien2
+                }
+                else{
+                    document.getElementById('show').innerText=tien
+                }
+            }
+            else{
+                if (my=='VND'){
+                    let tien3=tien*23000;
+                    document.getElementById('show').innerText=tien3
+                }
+                else{
+                    document.getElementById('show').innerText=tien
+                }
+            }
+        }      
+    </script>
+</body>
+</html>
