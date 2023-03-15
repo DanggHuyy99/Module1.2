@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How many days ?</title>
+    <style>
+        #btnn{
+            background-color: lightblue;
+            border-radius: 40%;
+            box-shadow: 2px 2px;
+            border-style: dashed;
+            border: 2px solid rgb(27, 170, 206);         
+        }
+    </style>
+</head>
+<body>
+    <h1>How many days in a month?</h1>
+    <form action="">
+        <input type="number" id="month" placeholder="Enter a month"><input type="button" value="Check" id="btnn" onclick="clickhere()">
+        <p><span id="show"></span></p>
+    </form>
+    <script>
+        function clickhere(){
+        let thang = parseInt(document.getElementById('month').value);
+        console.log(thang);
+        switch (thang){
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                document.getElementById('show').innerText="This month has 31 days";
+                break;
+            case 2:
+                document.getElementById('show').innerText="This month has 28 days or 29 days";
+                break;
+            case 2:
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                document.getElementById('show').innerText="This month has 30 days";
+                break;
+            default:
+                document.getElementById('show').innerText="Please enter 1 month of the year";
+                break;
+    }
+}
+    </script>
+</body>
+</html>
