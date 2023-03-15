@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weight and Height</title>
+</head>
+<body>
+    <script>
+        let weight = prompt('Enter weight?(kg)');
+        let height = prompt('Enter height?(m)');
+        let bmi = weight / (height*2);
+        console.log(bmi);
+        switch (bmi < 18.5){
+            case true:
+                alert('Underweight');
+                break;
+            case false:
+                switch (bmi < 25){
+                    case true:
+                        alert('Normal');
+                        break;
+                    case false: 
+                        switch (bmi < 30){
+                            case true: 
+                                alert('Overweight');
+                                break;
+                            case false:
+                                alert('Obese');
+                                break;
+                        }
+                }
+        }
+    </script>
+</body>
+</html>
