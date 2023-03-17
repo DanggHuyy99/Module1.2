@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>The input ends when the user enters the value -1. <br> Each input value will be displayed and the sum of those values will be performed.</h1>
+    <p style="color: red;font-size: 45px;" id="show"></p>
+
+    <script>
+        let num = prompt('Enter a number: ');
+        let total = 0;
+        let i;
+        let text = "";
+        while (num != -1){
+            num = Number(prompt('Enter a number: '));           
+            alert("The number entered is: " + num);
+            total += num;         
+            text="The toltal is: " + total       
+        }
+        window.alert(total);
+        document.getElementById('show').innerHTML=text;
+    </script>
+</body>
+</html>
