@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiplication Table</title>
+</head>
+<body>
+    <table style="text-align: center;"> </table>
+    <script>
+        let huy = "<table border='1' cellpadding='10' width='800' cellspacing='0'style='text-align: center'>"
+        let i = 2;
+        let j = 2;
+            while (i < 11) {
+                huy = huy + "<tr>";
+                while (j < 10) {
+                    huy = huy + "<td>" + j + "x" + (i - 1) + "=" + (i-1) * j + "</td>";
+                    j++;
+                } 
+                huy = huy + "</tr>";
+                j=2;
+                i++;
+                
+            }
+            huy = huy + "</table>"
+            console.log(huy);
+        document.write(huy);
+    </script>
+</body>
+</html>
