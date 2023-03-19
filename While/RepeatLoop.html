@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repeat Loop</title>
+</head>
+<body>
+    <!-- <script>
+        let huy = "<table border ='1' width='550' cellspacing='0' cellpadding='15'>"
+        let i;
+        let j;
+        for (i = 1; i <= 10; i++) {
+            huy = huy + "<tr>";
+            for (j = 1; j <= 10; j++) {
+                huy = huy + "<td>" + i * j + "</td>";
+            }
+            huy = huy + "</tr>";
+        }
+        huy = huy + "</table>";
+        document.write(huy);
+    </script> -->
+    <!-- Vòng lặp lồng nhau với For -->
+
+    <script>
+        let huy = "<table border ='1' width='550' cellspacing='0' cellpadding='15'>"
+        let i = j = 1;
+        while (i <= 10){
+            huy = huy + "<tr>";
+            while (j <= 10){
+                huy = huy + "<td>" + i * j + "</td>";
+                j++;
+            }
+            huy = huy + "</tr>";
+            j = 1;
+            i++;
+        } 
+        huy = huy + "</table>";
+        document.write(huy);
+    </script>
+</body>
+</html>
